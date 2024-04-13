@@ -15,7 +15,6 @@ class TrailAdapter(
     inner class MyViewHolder(binding: TrailRowLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val name = binding.nameRow
-        val difficulty = binding.difficultyRow
         val image = binding.imageViewRow
 
         init {
@@ -41,7 +40,6 @@ class TrailAdapter(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.name.text = trails[position].name
-        holder.difficulty.text = trails[position].difficulty
         holder.image.setImageResource(trails[position].image)
     }
 }

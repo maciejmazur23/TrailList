@@ -59,3 +59,9 @@ android {
         baseline = file("lint-baseline.xml")
     }
 }
+
+android {
+    viewBinding {
+        enabled = true
+    }
+}

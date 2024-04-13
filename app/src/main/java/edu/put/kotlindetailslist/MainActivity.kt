@@ -71,7 +71,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun changeDestinationLight(bottomNav: BottomNavigationView) {
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            println(destination.label)
             val bundle = navController.currentBackStackEntry?.arguments
             val difficulty = bundle?.getString("difficulty")
             if (destination.id == R.id.startFragment) {
@@ -155,12 +154,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.go_to_logout -> {
-                true
-            }
-            R.id.go_to_settings -> {
-                true
-            }
+            R.id.go_to_logout -> true
+            R.id.go_to_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -176,7 +171,7 @@ class MainActivity : AppCompatActivity() {
             Trail(
                 name = "Szlak Orlich Gniazd",
                 length = 100,
-                difficulty = "Średni",
+                difficulty = "Łatwy",
                 estimatedDuration = 2000,
                 description = "Szlak turystyczny wzdłuż zamków na Jurze Krakowsko-Częstochowskiej.",
                 image = R.drawable.szlak_orlich_gniazd
@@ -200,7 +195,7 @@ class MainActivity : AppCompatActivity() {
             Trail(
                 name = "Szlak Beskidzki",
                 length = 120,
-                difficulty = "Średni",
+                difficulty = "Trudny",
                 estimatedDuration = 2500,
                 description = "Szlak o charakterze górskim, przecinający pasmo Beskidów.",
                 image = R.drawable.szlak_beskidzki
@@ -216,7 +211,7 @@ class MainActivity : AppCompatActivity() {
             Trail(
                 name = "Szlak Babia Góra",
                 length = 30,
-                difficulty = "Średni",
+                difficulty = "Łatwy",
                 estimatedDuration = 800,
                 description = "Szlak prowadzący na najwyższy szczyt Beskidu Żywieckiego - Babia Góra.",
                 image = R.drawable.szaki_turystyczne_babia_gora

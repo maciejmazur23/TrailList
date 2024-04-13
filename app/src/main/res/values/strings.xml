@@ -23,7 +23,7 @@
     <string name="stop">Stop</string>
     <string name="settings" />
     <string name="done" />
-    <string name="sendSms" >Send SMS from trial</string>
+    <string name="sendSms">Send SMS from trial</string>
     <string name="menu_title">Menu</string>
     <string name="opisStronyGlownej">To aplikacja do przeglądania górskich szlaków turystycznych</string>
 </resources>
